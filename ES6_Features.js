@@ -1,5 +1,5 @@
 //1.let and constant ,block scope keywords
-//let and var Things = [1,2,3,4,5];
+var Things = [1,2,3,4,5];
 
 function display() {
   for (var i = 0; i < Things.length; i++) {
@@ -20,6 +20,14 @@ function display() {
 }
 display();
 //o/p - 1 2 3 4 5
+
+//why let prins 12345
+//declaring i as let makes it block-scoped of for block and not of function,
+//so every time let gets intialized in stack and one by one set timeout is called and run in callstack for each 
+
+//why var prints 55555
+//but for var as it is function scoped it is only reassigned so as becomes  it 5,
+//set timeout is not called in callstack 
 
 //2.Arrow functions
 //use return for multiple lines of code not single
