@@ -1,6 +1,30 @@
 //1.let and constant ,block scope keywords
+//let and var Things = [1,2,3,4,5];
+
+function display() {
+  for (var i = 0; i < Things.length; i++) {
+    setTimeout(function () {
+      console.log(i);
+    }, i * 1000);
+  }
+}
+display();
+//o/p - 5 5 5 5 5
+
+function display() {
+  for (let i = 0; i < Things.length; i++) {
+    setTimeout(function () {
+      console.log(i);
+    }, i * 1000);
+  }
+}
+display();
+//o/p - 1 2 3 4 5
 
 //2.Arrow functions
+//use return for multiple lines of code not single
+//no use of new keyboard
+//this assigns to parent parameter
 const isPrime = (num) => {
   for (let i = 2; i < num; i++) if (num % i === 0) return false;
   return num > 1;
@@ -9,6 +33,22 @@ console.log(isPrime(9));
 
 //3.multilne strings
 let hello = "hello world, hello Js, hello ReactJs";
+
+//Clone objects
+let person = { height: '176' };
+let cPerson = Object.assign({}, person);
+console.log(cPerson);
+
+let person = {height:'176'};
+let employee = {id:'#1237', name:'John'};
+let myEmp = Object.assign({}, person, employee);
+console.log(myEmp);
+//o/p -{height:'176',id:'#1237', name:'John'}
+
+
+//object.is()             //checks a and b equal
+let a=10, b=10;
+Object.is(a,b);
 
 //4.Default Parameters
 function isPrime(num = 10) {
@@ -19,7 +59,7 @@ console.log(isPrime());
 
 //5.Template Literal
 let name = "deepak";
-console.log("my name is $(name)");
+console.log("my name is ${name}");
 
 //6. Destructuring Assignment
 //Array destructuring
@@ -65,7 +105,7 @@ for (let x of cars) {
   console.log(x);
 }
 
-let s = "react"; //string
+let s = "react";                      //string
 for (let x of s) {
   console.log(x);
 }
@@ -83,6 +123,10 @@ let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
 const stack = new Set();
 stack.add('mongodb')
 stack.add('mongodb')
+
+//set
+const x=new Set([...arr])
+console.log(x)
 
 //14.Maps
 let map = new Map();
