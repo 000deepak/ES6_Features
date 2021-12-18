@@ -1,4 +1,21 @@
 //1.let and constant ,block scope keywords
+//2.Arrow functions
+//3.multilne strings
+//4.Clone objects
+//5.Object.is()
+//6.Default parameter
+//7.Template literal
+//8.Destructering assignment
+//9.Promises
+//10.Class
+//11.for/of
+//12.Rest & Spread operator
+//13.Sets
+//14.Maps
+
+//new string number math array global methods.
+
+//let and constant ,block scope keywords
 var Things = [1,2,3,4,5];
 
 function display() {
@@ -39,7 +56,7 @@ const isPrime = (num) => {
 };
 console.log(isPrime(9));
 
-//3.multilne strings
+//multilne strings
 let hello = "hello world, hello Js, hello ReactJs";
 
 //Clone objects
@@ -58,18 +75,18 @@ console.log(myEmp);
 let a=10, b=10;
 Object.is(a,b);
 
-//4.Default Parameters
+//Default Parameters
 function isPrime(num = 10) {
   for (let i = 2; i < num; i++) if (num % i === 0) return false;
   return num > 1;
 }
 console.log(isPrime());
 
-//5.Template Literal
+//Template Literal
 let name = "deepak";
 console.log("my name is ${name}");
 
-//6. Destructuring Assignment
+// Destructuring Assignment
 //Array destructuring
 let fruits = ["Apple", "Banana"];
 let [a, b] = fruits;
@@ -79,7 +96,7 @@ let person = { name: "Peter", age: 28 };
 let { name, age } = person;
 console.log(name, age);
 
-//8.Promises
+//Promises
 
 //7.Enhanced object Literals
 function getMobile(manufacturer, model, year) {
@@ -91,7 +108,7 @@ function getMobile(manufacturer, model, year) {
 }
 console.log(getMobile("Samsung", "Galaxy", "2020"));
 
-//9.Class
+//Class
 class MernStack {
   constructor(firstName, stack) {
     this.firstName = firstName;
@@ -105,9 +122,9 @@ class MernStack {
 let developer = new MernStack("deepak", "ReactJs");
 developer.getName();
 
-//10.Modules
+//Modules
 
-//11.for/of
+//for/of
 const cars = ["BMW", "Volvo", "Mini"]; //array
 for (let x of cars) {
   console.log(x);
@@ -118,7 +135,7 @@ for (let x of s) {
   console.log(x);
 }
 
-//12.Rest Parameter
+//Rest Parameter
 function sum(...args) {
   let sum = 0;
   for (let arg of args) sum += arg;
@@ -127,7 +144,7 @@ function sum(...args) {
 
 let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
 
-//13.sets
+//sets
 const stack = new Set();
 stack.add('mongodb')
 stack.add('mongodb')
@@ -136,7 +153,7 @@ stack.add('mongodb')
 const x=new Set([...arr])
 console.log(x)
 
-//14.Maps
+//Maps
 let map = new Map();
 
 map.set('1', 'str1');   // a string key
